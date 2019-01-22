@@ -8,7 +8,7 @@ ENV LANG en_US.UTF-8
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys DE742AFA && \
     echo "deb http://ppa.launchpad.net/maxmind/ppa/ubuntu xenial main" > /etc/apt/sources.list.d/maxmind.list && \
     apt-get update && \
-    apt-get install --no-install-recommends -y geoipupdate ca-certificates && \
+    apt-get install --no-install-recommends -y geoipupdate ca-certificates cron && \
     apt-get -qy autoremove && \
     apt-get clean && \
     rm -r /var/lib/apt/lists/*
